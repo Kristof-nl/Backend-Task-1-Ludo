@@ -53,9 +53,36 @@ namespace Backend_Task_1_Ludo
             }
 
             static void fibonacci()
-            {
 
+            { 
+            bool flagFibonacci = false;
+            while (!flagFibonacci)
+                    {
+
+                    Console.Write("Hoe lang Fibonacci reeks wil je zien?: ");
+                    try
+                    {
+                        int sequenceLength = Convert.ToInt32(Console.ReadLine());
+                        int previusNumber = -1;
+                        int nextNumber = 1;
+
+                        for (int i = 0; i < sequenceLength; i++)
+                            {
+                            int sum = previusNumber + nextNumber;
+                            previusNumber = nextNumber;
+                            nextNumber = sum;
+                            Console.WriteLine(nextNumber);
+                            }
+                        flagFibonacci = true;
+
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Ongeldige invoer. De reeks lengte moet een getal zijn. ");
+                    }
+                }
             }
+
         }
     }
 }
