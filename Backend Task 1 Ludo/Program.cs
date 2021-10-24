@@ -71,8 +71,9 @@ namespace Backend_Task_1_Ludo
                             int sum = previusNumber + nextNumber;
                             previusNumber = nextNumber;
                             nextNumber = sum;
-                            Console.WriteLine(nextNumber);
+                            Console.Write(nextNumber +" ");
                             }
+                        Console.WriteLine();
                         flagFibonacci = true;
 
                     }
